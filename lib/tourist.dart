@@ -20,8 +20,8 @@ class _TouristListScreenState extends State<TouristListScreen> {
   TextEditingController searchController = TextEditingController();
 
   // แก้ URL ให้ตรงกับโครงสร้างโฟลเดอร์ของคุณ
-  final String apiUrl = "http://127.0.0.1/mid-66703889/flutter_mid_66703889/php.api";
-  final String imageUrl = "http://127.0.0.1/mid-66703889/flutter_mid_66703889/php.api/uploads/";
+  final String apiUrl = "http://127.0.0.1/flutter_mid_66703889/php.api";
+  final String imageUrl = "http://127.0.0.1/flutter_mid_66703889/php.api/uploads/";
 
 Future<void> fetchPlaces([String query = ""]) async {
     setState(() => isLoading = true);
@@ -172,7 +172,7 @@ class TouristDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // แก้ URL ให้ตรงกับโครงสร้างโฟลเดอร์ของคุณ
-    final String imageUrl = "http://127.0.0.1/mid-66703889/flutter_mid_66703889/php.api/uploads/";
+    final String imageUrl = "http://127.0.0.1/flutter_mid_66703889/php.api/uploads/";
     
     return Scaffold(
       appBar: AppBar(
@@ -239,7 +239,7 @@ class _AddEditTouristScreenState extends State<AddEditTouristScreen> {
   final ImagePicker _picker = ImagePicker();
   
   // แก้ URL ให้ตรงกับโครงสร้างโฟลเดอร์ของคุณ
-  final String uploadUrl = "http://127.0.0.1/mid-66703889/flutter_mid_66703889/php.api/uploads/";
+  final String uploadUrl = "http://127.0.0.1/flutter_mid_66703889/php.api/uploads/";
 
   @override
   void initState() {
@@ -267,8 +267,8 @@ class _AddEditTouristScreenState extends State<AddEditTouristScreen> {
   Future<void> savePlace() async {
     // แก้ URL ให้ตรงกับโครงสร้างโฟลเดอร์ของคุณ
     final String url = isEdit 
-      ? "http://127.0.0.1/mid-66703889/flutter_mid_66703889/php.api/update.php" 
-      : "http://127.0.0.1/mid-66703889/flutter_mid_66703889/php.api/add.php";
+      ? "http://127.0.0.1/flutter_mid_66703889/php.api/update.php" 
+      : "http://127.0.0.1/flutter_mid_66703889/php.api/add.php";
       
     var request = http.MultipartRequest('POST', Uri.parse(url));
     
